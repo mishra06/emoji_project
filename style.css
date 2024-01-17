@@ -58,6 +58,14 @@ input[type=submit]:hover{
     font-size: 50px;
     /* width: 8rem;
     max-width: 8rem; */
+    transition: all 0.5s;
+    
+}
+
+.Emojyy:hover{
+
+    transform: scale(1.5);
+ 
 }
 
 .aliases{
@@ -101,11 +109,21 @@ input[type=submit]:hover{
     /* overflow-wrap: break-word; */
     /* flex-wrap: wrap; */
     /* word-wrap: break-word; */
+    transition: all 0.5s;
+   
+}
+.box:hover{
+    transform: scale(1.1);
 }
 
 .box p{
     word-wrap: break-word;
     /* border: 1px solid gray; */
+}
+
+.pt{
+    border-radius: 15px;
+    border: none;
 }
 
 .aliases{

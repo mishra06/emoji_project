@@ -34,10 +34,10 @@ function displayResult(searchQuary = " "){
 
         let Box = document.createElement("div");
         Box.classList.add("box");
-        let Aliases = e.aliases.join(" ");
+        // let Aliases = e.aliases.join(" ");
         Box.innerHTML=`
             <p class="Emojyy">${e.emoji}</p>
-            <p class ="aliases">${Aliases}</p>
+            <p class ="aliases">${e.aliases}</p>
             <p class="desc">${e.description}</p>
         `
         parent.appendChild(Box);
