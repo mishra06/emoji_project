@@ -17,6 +17,14 @@ body{
     color: var(--white);
 }
 
+.mains{
+    text-align: center;
+}
+
+.logos{
+    text-align: center;
+}
+
 .container{
     padding: 1rem;
 }
@@ -46,23 +54,63 @@ input[type=submit]:hover{
     border-color: var(--gray);
 }
 
-.emoji{
-    font-size: 300%;
-    width: 8rem;
-    max-width: 8rem;
+.Emojyy{
+    font-size: 50px;
+    /* width: 8rem;
+    max-width: 8rem; */
 }
 
 .aliases{
     text-transform: capitalize;
-    font-size: 125%;
+    font-size: 15px;
 }
 
 .desc{
-    font-size: 125%;
+    font-size: 15px;
 }
 
 .desc::first-letter{
     text-transform: uppercase;
+}
+
+.result_sec{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 3px solid white;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    gap: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px 0px #803636;
+    cursor: pointer;
+    background-color: #221f1f;
+    /* overflow: auto; */
+    /* overflow-wrap: break-word; */
+    /* flex-wrap: wrap; */
+    /* word-wrap: break-word; */
+}
+
+.box p{
+    word-wrap: break-word;
+    /* border: 1px solid gray; */
+}
+
+.aliases{
+    /* text-overflow: ellipsis; */
+    width: 90%;
 }
 
 

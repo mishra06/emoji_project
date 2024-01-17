@@ -32,23 +32,16 @@ function displayResult(searchQuary = " "){
     parent.innerHTML=" ";
     filterData.forEach((e) =>{
 
-        let main_sec = document.createElement("div");
-        main_sec.classList.add("main_sec_css");
-
-        let result = document.createElement("div");
-        result.classList.add("sample");
-        result.innerHTML=`
-
-        <div class="result">
+        let Box = document.createElement("div");
+        Box.classList.add("box");
+        let Aliases = e.aliases.join(" ");
+        Box.innerHTML=`
             <p class="Emojyy">${e.emoji}</p>
-            <p>${e.aliases}</p>
-            <p>${e.description}</p>
-        </div>`
-
-        main_sec.appendChild(result);
-        parent.appendChild(main_sec);
-        console.log(main_sec);
-
+            <p class ="aliases">${Aliases}</p>
+            <p class="desc">${e.description}</p>
+        `
+        parent.appendChild(Box);
+        
     })
 
 }
