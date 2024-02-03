@@ -1,13 +1,8 @@
 // const finder = document.querySelector("#search_field");
 
 function searchEmoji(){
-    
-    // finder.Value;
-    // displayResult(finder);
-    // return false;
 
     let inputValue = document.getElementById("search_field").value;
-    // console.log(inputValue);
     displayResult(inputValue);
 }
 
@@ -49,4 +44,20 @@ function displayResult(searchQuary = " "){
 // finder.addEventListener("keyup", searchemoji);
 document.getElementById("search_field").addEventListener("keyup", searchEmoji)
 
+const debounce = function(func,delay){
+    let timer;
+    console.log("hiii");
+    return function(){
+        args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(()=>{
+            func(args);
+        },delay);
+        console.log("hlo");
+    }
+   
+}
+
+const Debounce = debounce(searchEmoji,3000);
+Debounce();
 window.onload = () => displayResult();
