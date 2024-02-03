@@ -42,7 +42,7 @@ function displayResult(searchQuary = " "){
 }
 
 // finder.addEventListener("keyup", searchemoji);
-document.getElementById("search_field").addEventListener("keyup", searchEmoji)
+
 
 const debounce = function(func,delay){
     let timer;
@@ -51,13 +51,13 @@ const debounce = function(func,delay){
         args = arguments;
         clearTimeout(timer);
         timer = setTimeout(()=>{
-            func(args);
+            func.apply(this,args);
         },delay);
         console.log("hlo");
     }
    
 }
 
-const Debounce = debounce(searchEmoji,3000);
-Debounce();
+const Debounce = debounce(searchEmoji,300);
+document.getElementById("search_field").addEventListener("keyup", Debounce)
 window.onload = () => displayResult();
